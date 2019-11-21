@@ -8,8 +8,11 @@ $(document).ready(function(){
     $(this).prop('Counter',0).animate({
         Counter: $(this).text()
     }, {
-        duration: 500,
+        duration: 2000,
         easing: 'swing',
+        complete: function() {
+           alert($(this).text());
+         },
         step: function (now) {
             $(this).text(Math.ceil(now));
         }
@@ -20,8 +23,9 @@ $(document).ready(function(){
 </head>
 <body>
 
-<h2 ><span class="count">10</span></h2>
-<h2 ><span class="count">87</span></h2>
+<h2><span class="count">10</span></h2>
+<h2><span class="count">90</span></h2>
+<h2><span class="count">5052</span></h2>
 
 </body>
 </html>
